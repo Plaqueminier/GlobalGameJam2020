@@ -7,21 +7,6 @@ using System;
 
 public class Enemy : MonoBehaviour
 {
-    NavMeshAgent agent;
-    NavMeshObstacle obstacle;
-    PlayerManager player;
-    public float attackRadius;
-    public float lookRadius;
-    public Animator animator;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public float attackRadius = 10f;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

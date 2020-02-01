@@ -19,7 +19,10 @@ public class Target : MonoBehaviour
 
     void Die()
     {
-        FindObjectOfType<AudioManager>().Play("zombie_die");
+        if (gameObject.name == "Zombie")
+            FindObjectOfType<AudioManager>().Play("zombie_die");
+        else if (gameObject.name == "Mort")
+            FindObjectOfType<AudioManager>().Play("mort_die");
         Destroy(gameObject);
     }
 }
