@@ -10,11 +10,18 @@ public class Gun : MonoBehaviour
 
     public Camera fpsCam;
     public GameObject impactEffect;
+    PlayerManager playerManager;
+
+    void Start()
+    {
+        playerManager = PlayerManager.instance;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+
+        if (Input.GetButtonDown("Fire1") && !playerManager.inputPaused)
         {
             Shoot();
         }

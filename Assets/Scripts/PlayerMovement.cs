@@ -17,8 +17,10 @@ public class PlayerMovement : MonoBehaviour {
 
     bool isGrounded;
 
-    void Start () {
+    PlayerManager playerManager;
 
+    void Start () {
+        playerManager = PlayerManager.instance;
     }
 
     void Update () {
@@ -30,11 +32,15 @@ public class PlayerMovement : MonoBehaviour {
 
         float x = Input.GetAxis ("Horizontal");
         float z = Input.GetAxis ("Vertical");
+        if (playerManager.inputPaused) {
+            x = 0;
+            z = 0;
+        }
 
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move (move * speed * Time.deltaTime);
 
-        if (Input.GetButtonDown ("Jump") && isGrounded) {
+        if (Input.GetButtonDown ("Jump") && isGrounded && !playerManager.inputPaused) {
             velocity.y = Mathf.Sqrt (jumpHeight * -2f * gravity);
         }
 
