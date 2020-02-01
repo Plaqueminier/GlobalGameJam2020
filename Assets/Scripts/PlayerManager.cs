@@ -6,10 +6,12 @@ public class PlayerManager : MonoBehaviour
 {
 
     public float health;
+    public bool inputPaused;
     public static PlayerManager instance;
 
     void Awake()
     {
+        inputPaused = false;
         if (instance != null) {
             Debug.Log("Warning, multiple players");
             return;

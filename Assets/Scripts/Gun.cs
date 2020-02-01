@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     public Camera fpsCam;
     public GameObject impactEffect;
     public float damageRate = 10f;
+    PlayerManager playerManager;
 
     public LineRenderer lineRenderer;
     bool release = true;
@@ -18,6 +19,7 @@ public class Gun : MonoBehaviour
     private float nextTimeToFire = 0f;
     void Start()
     {
+        playerManager = PlayerManager.instance;
         lineRenderer.enabled = false;
     }
 
@@ -29,18 +31,18 @@ public class Gun : MonoBehaviour
             // lineRenderer.SetPosition(1, hit.point + hit.normal);
             lineRenderer.SetPosition(1, hit.point + hit.normal);
         }
-        if (Input.GetButton("Fire1") && !release)
+        if (Input.GetButton("Fire1") && !release && !playerManager.inputPaused)
         {
             Shoot();
         }
-        if (Input.GetButtonDown("Fire1") && release)
+        if (Input.GetButtonDown("Fire1") && release && !playerManager.inputPaused)
         {
             release = false;
             //  sounds //
             FindObjectOfType<AudioManager>().Play("fireLaser");
 
         }
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire1") && !playerManager.inputPaused)
         {
             release = true;
             lineRenderer.enabled = false;
