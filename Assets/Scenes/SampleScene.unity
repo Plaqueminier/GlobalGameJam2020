@@ -405,7 +405,7 @@ MonoBehaviour:
     pitch: 1.86
     source: {fileID: 0}
   - name: zombie_attaque
-    clip: {fileID: 8300000, guid: 004be343ff2e3b648a3df3d3efccbe3e, type: 3}
+    clip: {fileID: 8300000, guid: e06d116428a841c47aaafeac82ca9898, type: 3}
     volume: 0.43
     pitch: 1.82
     source: {fileID: 0}
@@ -431,8 +431,8 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: mort_die
     clip: {fileID: 8300000, guid: 6a0b04b5dbd3ff44ca4aef850f7422f2, type: 3}
-    volume: 0.41
-    pitch: 1.62
+    volume: 1
+    pitch: 0.92
     source: {fileID: 0}
   - name: zombie_die
     clip: {fileID: 8300000, guid: ff236923916053f4c931fd381a931963, type: 3}
@@ -596,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
@@ -810,9 +810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4b2e7ef2cd5f34bb55dae10d6eb4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 3
-  lookRadius: 20
-  animator: {fileID: 1633017024}
   attackRadius: 3
   lookRadius: 9
   animator: {fileID: 1633017024}
@@ -1157,7 +1154,7 @@ PrefabInstance:
     - target: {fileID: 983764868301159556, guid: fdab589171ac29149aa6336fa2ef4ccb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 983764868301159556, guid: fdab589171ac29149aa6336fa2ef4ccb,
         type: 3}
@@ -1179,8 +1176,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 983764868301159558, guid: fdab589171ac29149aa6336fa2ef4ccb, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdab589171ac29149aa6336fa2ef4ccb, type: 3}
 --- !u!4 &1931894642 stripped
 Transform:
