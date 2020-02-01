@@ -16,9 +16,11 @@ public class Enemy1 : MonoBehaviour
     public GameObject ennemy;
     public Sound zombie_grrr;
     public Sound zombie_run;
+    public Sound zombie_scream;
     public Sound zombie_attaque;
     public Sound zombie_die;
     EnemyCombat enemyCombat;
+    bool scream = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,13 +41,18 @@ public class Enemy1 : MonoBehaviour
         bool isAttacking = false;
         if (distance <= lookRadius)
         {
+            if (!scream)
+            {
+                zombie_scream.source.Play();
+                scream = true;
+            }
             agent.SetDestination(player.transform.position);
             if (distance <= attackRadius)
             {
                 isAttacking = true;
                 animator.SetBool("isRunning", isRunning);
                 animator.SetBool("isAttacking", isAttacking);
-                enemyCombat.Attack();
+                enemyCombat.Attack(this, player);
             }
             else
             {
@@ -53,6 +60,10 @@ public class Enemy1 : MonoBehaviour
                 animator.SetBool("isRunning", isRunning);
                 animator.SetBool("isAttacking", isAttacking);
             }
+        }
+        else
+        {
+            scream = false;
         }
         if (!isRunning && !isAttacking && !zombie_grrr.source.isPlaying)
         {
@@ -82,7 +93,7 @@ public class Enemy1 : MonoBehaviour
             //     zombie_run.source.Stop();
             // }
 
-            if (zombie_attaque.source.isPlaying)
+            if (!zombie_attaque.source.isPlaying)
             {
                 zombie_attaque.source.Play();
             }
@@ -104,6 +115,7 @@ public class Enemy1 : MonoBehaviour
     {
         zombie_grrr = FindObjectOfType<AudioManager>().getAudio("zombie_grrr");
         zombie_run = FindObjectOfType<AudioManager>().getAudio("zombie_run");
+        zombie_scream = FindObjectOfType<AudioManager>().getAudio("zombie_scream");
         zombie_attaque = FindObjectOfType<AudioManager>().getAudio("zombie_attaque");
         zombie_die = FindObjectOfType<AudioManager>().getAudio("zombie_die");
     }

@@ -18,6 +18,7 @@ public class DialogueSystem : MonoBehaviour
     public string[] replies;
     public bool[] repliesIsPlayedJustAfter;
     int replyCount;
+
     void Start()
     {
         timerDelay = displayDelay;
@@ -74,6 +75,7 @@ public class DialogueSystem : MonoBehaviour
     void skipReply() {
         currentCount = maxCount;
         textMesh.text = textStr.Substring(0, currentCount);
+        // Debug.Log(textMesh.characterInfo[0]);
         isDisplaying = false;
     }
 }

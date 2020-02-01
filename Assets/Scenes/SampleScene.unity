@@ -352,7 +352,7 @@ PrefabInstance:
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.24
+      value: -10.4
       objectReference: {fileID: 0}
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
@@ -362,7 +362,7 @@ PrefabInstance:
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.51
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
@@ -603,8 +603,13 @@ MonoBehaviour:
     volume: 0.26
     pitch: 1.1
     source: {fileID: 0}
-  - name: zombie_attaque
+  - name: zombie_scream
     clip: {fileID: 8300000, guid: 0129bdd283f32f4438bb13d3b143db63, type: 3}
+    volume: 0.26
+    pitch: 1.1
+    source: {fileID: 0}
+  - name: zombie_attaque
+    clip: {fileID: 8300000, guid: 004be343ff2e3b648a3df3d3efccbe3e, type: 3}
     volume: 0.26
     pitch: 1.1
     source: {fileID: 0}
@@ -980,7 +985,7 @@ PrefabInstance:
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.659946
+      value: -30.95995
       objectReference: {fileID: 0}
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
@@ -990,7 +995,7 @@ PrefabInstance:
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.4301262
+      value: 8.130123
       objectReference: {fileID: 0}
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
@@ -1015,7 +1020,7 @@ PrefabInstance:
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
@@ -1280,7 +1285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529779415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.75, y: 1.051, z: 36.23}
+  m_LocalPosition: {x: 59, y: 1.051, z: 36.23}
   m_LocalScale: {x: 1.05, y: 0.68993384, z: 1.0194472}
   m_Children:
   - {fileID: 763914461}
@@ -1299,7 +1304,7 @@ PrefabInstance:
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.24
+      value: -25.000004
       objectReference: {fileID: 0}
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
@@ -1309,7 +1314,7 @@ PrefabInstance:
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.51
+      value: 18.999996
       objectReference: {fileID: 0}
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}

@@ -1005,8 +1005,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -30}
+  m_AnchoredPosition: {x: 0, y: -4}
+  m_SizeDelta: {x: -40, y: -28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1029994128
 MonoBehaviour:
@@ -1026,18 +1026,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec
-    scelerisque risus. Ut porta, ex nec dapibus hendrerit, eros velit tincidunt enim,
-    ac dignissim erat turpis et urna. Praesent sit amet libero euismod ligula volutpat
-    ornare. Donec ac erat quam. Pellentesque habitant morbi tristique senectus et
-    netus et malesuada fames ac turpis egestas. Nulla facilisi. Vivamus sed consequat
-    massa. Integer ac odio ipsum. Pellentesque non ante ultrices, luctus mauris in,
-    sagittis nibh. Mauris ac augue lacus. Donec in molestie magna, eget molestie
-    massa. Cras at libero magna. Vestibulum ultrices hendrerit libero in volutpat.
-    Praesent eu nibh purus. '
+  m_text: Lorem ipsum dolor sit amet
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8821b9fc46d63f248a0a95ccb9ff74ee, type: 2}
+  m_sharedMaterial: {fileID: 169966072826178860, guid: 8821b9fc46d63f248a0a95ccb9ff74ee,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1072,14 +1065,14 @@ MonoBehaviour:
   m_textAlignment: 264
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 10
+  m_lineSpacing: 9
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 5
-  m_firstOverflowCharacterIndex: 376
+  m_firstOverflowCharacterIndex: 344
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1108,7 +1101,7 @@ MonoBehaviour:
     spaceCount: 97
     wordCount: 97
     linkCount: 0
-    lineCount: 7
+    lineCount: 8
     pageCount: 2
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2553,43 +2546,24 @@ MonoBehaviour:
   displayDelay: 0.01
   isDisplaying: 0
   replies:
-  - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec scelerisque
-    risus. Ut porta, ex nec dapibus hendrerit, eros velit tincidunt enim, ac dignissim
-    erat turpis et urna. Praesent sit amet libero euismod ligula volutpat ornare.
-    Donec ac erat quam. Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas. Nulla facilisi. Vivamus sed consequat massa.
-    Integer ac odio ipsum. Pellentesque non ante ultrices, luctus mauris in, sagittis
-    nibh. Mauris ac augue lacus. Donec in molestie magna, eget molestie massa. Cras
-    at libero magna. Vestibulum ultrices hendrerit libero in volutpat. Praesent eu
-    nibh purus. '
-  - 'Lorem im dolor sit amet, consectetur adipiscing elit. Suspendisse nec scelerisque
-    risus. Ut porta, ex nec dapibus hendrerit, eros velit tincidunt enim, ac dignissim
-    erat turpis et urna. Praesent sit amet libero euismod ligula volutpat ornare.
-    Donec ac erat quam. Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas. Nulla facilisi. Vivamus sed consequat massa.
-    Integer ac odio ipsum. Pellentesque non ante ultrices, luctus mauris in, sagittis
-    nibh. Mauris ac augue lacus. Donec in molestie magna, eget molestie massa. Cras
-    at libero magna. Vestibulum ultrices hendrerit libero in volutpat. Praesent eu
-    nibh purus. '
-  - 'Lorem um dolor sit amet, consectetur adipiscing elit. Suspendisse nec scelerisque
-    risus. Ut porta, ex nec dapibus hendrerit, eros velit tincidunt enim, ac dignissim
-    erat turpis et urna. Praesent sit amet libero euismod ligula volutpat ornare.
-    Donec ac erat quam. Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas. Nulla facilisi. Vivamus sed consequat massa.
-    Integer ac odio ipsum. Pellentesque non ante ultrices, luctus mauris in, sagittis
-    nibh. Mauris ac augue lacus. Donec in molestie magna, eget molestie massa. Cras
-    at libero magna. Vestibulum ultrices hendrerit libero in volutpat. Praesent eu
-    nibh purus. '
-  - 'ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec scelerisque
-    risus. Ut porta, ex nec dapibus hendrerit, eros velit tincidunt enim, ac dignissim
-    erat turpis et urna. Praesent sit amet libero euismod ligula volutpat ornare.
-    Donec ac erat quam. Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas. Nulla facilisi. Vivamus sed consequat massa.
-    Integer ac odio ipsum. Pellentesque non ante ultrices, luctus mauris in, sagittis
-    nibh. Mauris ac augue lacus. Donec in molestie magna, eget molestie massa. Cras
-    at libero magna. Vestibulum ultrices hendrerit libero in volutpat. Praesent eu
-    nibh purus. '
-  repliesIsPlayedJustAfter: 00010100
+  - "Trouvez tout ce qui vous fait vous sentir mieux, ce qui vous anime et vous porte
+    pour tenir un jour de plus. Appr\xE9ciez chaque instant agr\xE9able et le miracle
+    de la vie avec ses potentialit\xE9s."
+  - "Votre souffrance vous ayant men\xE9(e) jusqu'\xE0 sa limite, vous avez s\xFBrement
+    surv\xE9cu pour une bonne raison. Je suis persuad\xE9 que vous avez beaucoup
+    \xE0 apporter \xE0 ce monde."
+  - "Votre connaissance de la souffrance vous y rend sensible et capable de compassion
+    et de soutien d'autres personnes dans la douleur. Vous pouvez apaiser, inspirer
+    et donner du courage \xE0 nombre de gens."
+  - "Si vous inversez votre perspective, vous pouvez transformer votre carence affective
+    en r\xE9alisation de la richesse et quantit\xE9 d'amour que vous avez \xE0 partager."
+  - "Votre richesse int\xE9rieure du fait de votre exp\xE9rience unique vous donne
+    une valeur inimitable. Cela vous rend en soi digne d'amour."
+  - La personne qui vous correspond est certainement en chemin pour vous rencontrer
+    dans un futur proche. Plus vous entrez en contact avec de nouvelles personnes
+    enrichissantes, plus vous gagnez en confiance en vous exprimant authentiquement,
+    plus vous vous rapprochez de cette personne.
+  repliesIsPlayedJustAfter: 010001000100
 --- !u!4 &1720549960
 Transform:
   m_ObjectHideFlags: 0
