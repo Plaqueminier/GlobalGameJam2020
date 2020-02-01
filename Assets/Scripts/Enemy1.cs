@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System;
 
 public class Enemy1 : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class Enemy1 : MonoBehaviour
     public float attackRadius = 10f;
     public float lookRadius = 20f;
     public Animator animator;
+    public GameObject ennemy;
+    public Sound zombie_grrr;
+    public Sound zombie_run;
+    public Sound zombie_attaque;
+    public Sound zombie_die;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +26,8 @@ public class Enemy1 : MonoBehaviour
         obstacle = GetComponent<NavMeshObstacle>();
         player = PlayerManager.instance;
         agent.stoppingDistance = attackRadius - 0.1f;
-        agent.avoidancePriority = Random.Range(0, 10);
+        agent.avoidancePriority = UnityEngine.Random.Range(0, 10);
+        setSounds();
     }
 
     // Update is called once per frame
@@ -29,21 +36,62 @@ public class Enemy1 : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.transform.position);
         bool isRunning = false;
         bool isAttacking = false;
-        if (distance <= lookRadius) {
+        if (distance <= lookRadius)
+        {
             agent.SetDestination(player.transform.position);
-            if (distance <= attackRadius) {
+            if (distance <= attackRadius)
+            {
                 isAttacking = true;
                 animator.SetBool("isRunning", isRunning);
                 animator.SetBool("isAttacking", isAttacking);
                 // agent.enabled = false;
                 // obstacle.enabled = true;
-            } else {
+            }
+            else
+            {
                 isRunning = true;
                 animator.SetBool("isRunning", isRunning);
                 animator.SetBool("isAttacking", isAttacking);
                 // agent.enabled = true;
                 // obstacle.enabled = false;
             }
+        }
+        if (!isRunning && !isAttacking && !zombie_grrr.source.isPlaying)
+        {
+            Debug.Log(ennemy);
+            zombie_grrr.source.Play();
+            zombie_run.source.Stop();
+        }
+        else if (isRunning)
+        {
+            // if (zombie_grrr.source.isPlaying)
+            // {
+            //     zombie_grrr.source.Stop();
+            // }
+            if (!zombie_run.source.isPlaying)
+            {
+                zombie_grrr.source.Stop();
+                zombie_run.source.Play();
+            }
+        }
+        else if (isAttacking)
+        {
+            if (zombie_grrr.source.isPlaying)
+            {
+                zombie_grrr.source.Play();
+            }
+
+            if (zombie_run.source.isPlaying)
+            {
+                zombie_run.source.Stop();
+            }
+
+            if (zombie_attaque.source.isPlaying)
+            {
+                zombie_attaque.source.Play();
+            }
+
+            //zombie_attaque
         }
     }
 
@@ -53,5 +101,14 @@ public class Enemy1 : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRadius);
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+
+    void setSounds()
+    {
+        zombie_grrr = FindObjectOfType<AudioManager>().getAudio("zombie_grrr");
+        zombie_run = FindObjectOfType<AudioManager>().getAudio("zombie_run");
+        zombie_attaque = FindObjectOfType<AudioManager>().getAudio("zombie_attaque");
+        zombie_die = FindObjectOfType<AudioManager>().getAudio("zombie_die");
     }
 }

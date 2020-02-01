@@ -26,6 +26,7 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
+            // lineRenderer.SetPosition(1, hit.point + hit.normal);
             lineRenderer.SetPosition(1, hit.point + hit.normal);
         }
         if (Input.GetButton("Fire1") && !release)
@@ -34,16 +35,19 @@ public class Gun : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1") && release)
         {
-            Shoot();
             release = false;
             //  sounds //
-            FindObjectOfType<AudioManager>().Play("test");
+            FindObjectOfType<AudioManager>().Play("fireLaser");
 
         }
         if (Input.GetButtonUp("Fire1"))
         {
             release = true;
             lineRenderer.enabled = false;
+            if (FindObjectOfType<AudioManager>().IsPlaying("fireLaser"))
+            {
+                FindObjectOfType<AudioManager>().Stop("fireLaser");
+            }
         }
 
     }
@@ -68,10 +72,9 @@ public class Gun : MonoBehaviour
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
 
-            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGO, 2f);
+            // GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            // Destroy(impactGO, 2f);
 
-            // lineRenderer.SetPosition(0, transform.position);
 
 
             lineRenderer.enabled = true;

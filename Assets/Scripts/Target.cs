@@ -19,6 +19,7 @@ public class Target : MonoBehaviour
 
     void Die()
     {
+        FindObjectOfType<AudioManager>().Play("zombie_die");
         Destroy(gameObject);
     }
 }
