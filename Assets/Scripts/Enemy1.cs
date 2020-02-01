@@ -7,6 +7,7 @@ public class Enemy1 : MonoBehaviour
 {
 
     NavMeshAgent agent;
+    NavMeshObstacle obstacle;
     PlayerManager player;
     public float attackRadius = 10f;
     public Animator animator;
@@ -18,6 +19,7 @@ public class Enemy1 : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        obstacle = GetComponent<NavMeshObstacle>();
         player = PlayerManager.instance;
         agent.stoppingDistance = attackRadius;
     }

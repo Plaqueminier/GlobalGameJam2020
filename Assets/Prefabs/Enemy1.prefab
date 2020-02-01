@@ -75,10 +75,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 180
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -927,7 +927,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: db31b2c4120064a4a85c957be14b05d0, type: 2}
+      objectReference: {fileID: 2100000, guid: 9a09c6e70c7379243af2a331535e927b, type: 2}
     - target: {fileID: 8021513722340897840, guid: 871a0f159c8efc84e9a8683ebcaa7606,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
