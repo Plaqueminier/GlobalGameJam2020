@@ -10,10 +10,8 @@ public class Enemy1 : MonoBehaviour
     NavMeshObstacle obstacle;
     PlayerManager player;
     public float attackRadius = 10f;
+    public float lookRadius = 20f;
     public Animator animator;
-
-    [SerializeField]
-    bool isRunning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,23 +19,31 @@ public class Enemy1 : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         obstacle = GetComponent<NavMeshObstacle>();
         player = PlayerManager.instance;
-        agent.stoppingDistance = attackRadius;
+        agent.stoppingDistance = attackRadius - 0.1f;
+        agent.avoidancePriority = Random.Range(0, 10);
     }
 
     // Update is called once per frame
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        agent.SetDestination(player.transform.position);
-        Debug.Log(distance);
-        if (distance <= attackRadius) {
-            animator.SetBool("isRunning", false);
-            animator.SetBool("isAttacking", true);
-            isRunning = false;
-        } else {
-            animator.SetBool("isRunning", true);
-            animator.SetBool("isAttacking", false);
-            isRunning = true;
+        bool isRunning = false;
+        bool isAttacking = false;
+        if (distance <= lookRadius) {
+            agent.SetDestination(player.transform.position);
+            if (distance <= attackRadius) {
+                isAttacking = true;
+                animator.SetBool("isRunning", isRunning);
+                animator.SetBool("isAttacking", isAttacking);
+                // agent.enabled = false;
+                // obstacle.enabled = true;
+            } else {
+                isRunning = true;
+                animator.SetBool("isRunning", isRunning);
+                animator.SetBool("isAttacking", isAttacking);
+                // agent.enabled = true;
+                // obstacle.enabled = false;
+            }
         }
     }
 
@@ -45,5 +51,7 @@ public class Enemy1 : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRadius);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 }
