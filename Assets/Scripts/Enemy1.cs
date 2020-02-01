@@ -18,12 +18,13 @@ public class Enemy1 : MonoBehaviour
     public Sound zombie_run;
     public Sound zombie_attaque;
     public Sound zombie_die;
+    EnemyCombat enemyCombat;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        obstacle = GetComponent<NavMeshObstacle>();
+        enemyCombat = GetComponent<EnemyCombat>();
         player = PlayerManager.instance;
         agent.stoppingDistance = attackRadius - 0.1f;
         agent.avoidancePriority = UnityEngine.Random.Range(0, 10);
@@ -44,25 +45,21 @@ public class Enemy1 : MonoBehaviour
                 isAttacking = true;
                 animator.SetBool("isRunning", isRunning);
                 animator.SetBool("isAttacking", isAttacking);
-                // agent.enabled = false;
-                // obstacle.enabled = true;
+                enemyCombat.Attack();
             }
             else
             {
                 isRunning = true;
                 animator.SetBool("isRunning", isRunning);
                 animator.SetBool("isAttacking", isAttacking);
-                // agent.enabled = true;
-                // obstacle.enabled = false;
             }
         }
         if (!isRunning && !isAttacking && !zombie_grrr.source.isPlaying)
         {
             Debug.Log(ennemy);
             zombie_grrr.source.Play();
-            zombie_run.source.Stop();
         }
-        else if (isRunning)
+        else if (isRunning && !isAttacking)
         {
             // if (zombie_grrr.source.isPlaying)
             // {
@@ -70,21 +67,20 @@ public class Enemy1 : MonoBehaviour
             // }
             if (!zombie_run.source.isPlaying)
             {
-                zombie_grrr.source.Stop();
                 zombie_run.source.Play();
             }
         }
         else if (isAttacking)
         {
-            if (zombie_grrr.source.isPlaying)
-            {
-                zombie_grrr.source.Play();
-            }
+            // if (zombie_grrr.source.isPlaying)
+            // {
+            //     zombie_grrr.source.Play();
+            // }
 
-            if (zombie_run.source.isPlaying)
-            {
-                zombie_run.source.Stop();
-            }
+            // if (zombie_run.source.isPlaying)
+            // {
+            //     zombie_run.source.Stop();
+            // }
 
             if (zombie_attaque.source.isPlaying)
             {

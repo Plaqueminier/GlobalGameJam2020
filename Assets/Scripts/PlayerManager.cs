@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
 
-    #region Singleton
-
+    public float health;
     public static PlayerManager instance;
 
     void Awake()
@@ -18,18 +17,22 @@ public class PlayerManager : MonoBehaviour
         instance = this;
     }
 
-    #endregion
 
 
-    // Start is called before the first frame update
     void Start()
+    {
+    }
+
+    void Update()
     {
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float damage)
     {
-
+        health -= damage;
+        if (health <= 0) {
+            // Die
+        }
     }
 }
