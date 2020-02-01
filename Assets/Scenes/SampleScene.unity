@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 50c14e5754ba4a34e88adbc74b1c6085, type: 2}
+--- !u!95 &70780384 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5004167965770176289, guid: fdab589171ac29149aa6336fa2ef4ccb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1931894641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &234715533
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,10 +818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRadius: 3
   lookRadius: 20
-  animator: {fileID: 1633017024}
-  attackRadius: 3
-  lookRadius: 9
-  animator: {fileID: 1633017024}
+  animator: {fileID: 70780384}
   ennemy: {fileID: 1425414241}
   zombie_run:
     name: 
@@ -841,12 +844,6 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     source: {fileID: 0}
---- !u!95 &1633017024 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2074030428178480321, guid: fdab589171ac29149aa6336fa2ef4ccb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1931894641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1721354750
 GameObject:
   m_ObjectHideFlags: 0
