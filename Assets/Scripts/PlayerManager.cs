@@ -19,8 +19,6 @@ public class PlayerManager : MonoBehaviour
         instance = this;
     }
 
-
-
     void Start()
     {
     }
@@ -37,4 +35,12 @@ public class PlayerManager : MonoBehaviour
             // Die
         }
     }
+
+	void OnControllerColliderHit(ControllerColliderHit hit)
+	{
+		Rigidbody body = hit.collider.attachedRigidbody;
+
+		if (body)
+			body.velocity = new Vector3(0, 0, 0);
+	}
 }
