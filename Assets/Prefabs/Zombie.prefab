@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18d0cdb4debc2c246a1e45a9628e49cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   attackRadius: 3.2
   lookRadius: 9
   animator: {fileID: 0}
@@ -109,25 +109,25 @@ MonoBehaviour:
   animator: {fileID: 5004167965770176289}
   ennemy: {fileID: 0}
   mort_run:
-    name: 
+    name:
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
   mort_scream:
-    name: 
+    name:
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
   mort_attaque:
-    name: 
+    name:
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
   mort_die:
-    name: 
+    name:
     clip: {fileID: 0}
     volume: 0
     pitch: 0
@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15d9f25c2e682c54a9fb17d6deb3c17d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   health: 10
 --- !u!114 &5329742548039977951
 MonoBehaviour:
@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bb6924eb86c7e846a66bf13a7655c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   damage: 20
   attackSpeed: 0.5
   attackDelay: 2
@@ -175,7 +175,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0

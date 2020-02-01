@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.AI;
 using System;
 
-public class Enemy3 : Enemy
+public class Enemy_Boss : Enemy
 {
 
     NavMeshAgent agent;
     NavMeshObstacle obstacle;
     PlayerManager player;
-    public float attackRadius = 10f;
     public float lookRadius = 20f;
     public Animator animator;
     public GameObject ennemy;
