@@ -105,37 +105,33 @@ MonoBehaviour:
   attackRadius: 3.3
   lookRadius: 12
   animator: {fileID: 2667930724358276296}
-  ennemy: {fileID: 0}
-  zombie_grrr:
+  ennemy: {fileID: 2667930723295430590}
+  mort_run:
     name: 
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
-  zombie_run:
+  mort_scream:
     name: 
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
-  zombie_scream:
+  mort_attaque:
     name: 
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
-  zombie_attaque:
+  mort_die:
     name: 
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
-  zombie_die:
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    source: {fileID: 0}
+  waitAttack: 1
+  waitNextAttack: 12
 --- !u!114 &2183398030939326727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb6924eb86c7e846a66bf13a7655c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 2
   attackSpeed: 0.4
   attackDelay: 1.5
 --- !u!82 &7605231029574681858

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 983764868301159563}
   - component: {fileID: 983764868301159562}
   - component: {fileID: 983764868301159557}
-  - component: {fileID: 983764868301159558}
   - component: {fileID: 3957978819546346032}
   - component: {fileID: 5329742548039977951}
+  - component: {fileID: 1503573580356714912}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -89,46 +89,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &983764868301159558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983764868301159561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18d0cdb4debc2c246a1e45a9628e49cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRadius: 3.2
-  lookRadius: 9
-  animator: {fileID: 5004167965770176289}
-  ennemy: {fileID: 0}
-  mort_run:
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    source: {fileID: 0}
-  mort_scream:
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    source: {fileID: 0}
-  mort_attaque:
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    source: {fileID: 0}
-  mort_die:
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    source: {fileID: 0}
 --- !u!114 &3957978819546346032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,9 +114,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb6924eb86c7e846a66bf13a7655c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 1
   attackSpeed: 0.5
   attackDelay: 2
+--- !u!114 &1503573580356714912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983764868301159561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4b2e7ef2cd5f34bb55dae10d6eb4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 8
+  lookRadius: 20
+  animator: {fileID: 5004167965770176289}
+  ennemy: {fileID: 983764868301159561}
+  zombie_run:
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  zombie_scream:
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  zombie_attaque:
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  zombie_die:
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
 --- !u!95 &5004167965770176289
 Animator:
   serializedVersion: 3
