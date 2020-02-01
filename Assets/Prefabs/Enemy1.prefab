@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2667930723295430578}
   - component: {fileID: 2667930723295430577}
   - component: {fileID: 2183398030939326727}
-  - component: {fileID: 7564903192005523144}
+  - component: {fileID: 7013899774458605800}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -117,22 +117,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
---- !u!208 &7564903192005523144
-NavMeshObstacle:
+--- !u!114 &7013899774458605800
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2667930723295430590}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 0.3, y: 1, z: 0.3}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1.03, z: 0}
-  m_TimeToStationary: 0.5
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb6924eb86c7e846a66bf13a7655c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  attackSpeed: 0.4
+  attackDelay: 1.5
 --- !u!95 &2667930724358276296
 Animator:
   serializedVersion: 3

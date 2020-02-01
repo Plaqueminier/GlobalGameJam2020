@@ -12,12 +12,13 @@ public class Enemy1 : MonoBehaviour
     public float attackRadius = 10f;
     public float lookRadius = 20f;
     public Animator animator;
+    EnemyCombat enemyCombat;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        obstacle = GetComponent<NavMeshObstacle>();
+        enemyCombat = GetComponent<EnemyCombat>();
         player = PlayerManager.instance;
         agent.stoppingDistance = attackRadius - 0.1f;
         agent.avoidancePriority = Random.Range(0, 10);
@@ -35,14 +36,11 @@ public class Enemy1 : MonoBehaviour
                 isAttacking = true;
                 animator.SetBool("isRunning", isRunning);
                 animator.SetBool("isAttacking", isAttacking);
-                // agent.enabled = false;
-                // obstacle.enabled = true;
+                enemyCombat.Attack();
             } else {
                 isRunning = true;
                 animator.SetBool("isRunning", isRunning);
                 animator.SetBool("isAttacking", isAttacking);
-                // agent.enabled = true;
-                // obstacle.enabled = false;
             }
         }
     }
