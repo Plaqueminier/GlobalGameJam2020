@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyCombat : MonoBehaviour
 {
     public float damage = 10f;
@@ -20,22 +21,26 @@ public class EnemyCombat : MonoBehaviour
         attackCooldown -= Time.deltaTime;
     }
 
-    public void Attack(Enemy1 enemy, PlayerManager player)
+    public void Attack(Enemy enemy, PlayerManager player)
     {
-        if (attackCooldown <= 0f) {
+        if (attackCooldown <= 0f)
+        {
             StartCoroutine(DoDamage(attackDelay, enemy, player));
             attackCooldown = 1f / attackSpeed;
         }
     }
 
-    IEnumerator DoDamage(float delay, Enemy1 enemy, PlayerManager player)
+    IEnumerator DoDamage(float delay, Enemy enemy, PlayerManager player)
     {
         yield return new WaitForSeconds(delay);
         float distance = Vector3.Distance(enemy.transform.position, player.transform.position);
-        if (distance <= enemy.attackRadius) {
+        if (distance <= enemy.attackRadius)
+        {
             Debug.Log("Player take damage");
             player.TakeDamage(damage);
-        } else {
+        }
+        else
+        {
             Debug.Log("Player went too far to be attacked");
         }
     }
