@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System;
 
-public class Enemy1 : Enemy
+public class Enemy3 : Enemy
 {
 
     NavMeshAgent agent;
@@ -14,10 +14,11 @@ public class Enemy1 : Enemy
     public float lookRadius = 20f;
     public Animator animator;
     public GameObject ennemy;
-    public Sound mort_run;
-    public Sound mort_scream;
-    public Sound mort_attaque;
-    public Sound mort_die;
+    public Sound zombie_grrr;
+    public Sound zombie_run;
+    public Sound zombie_scream;
+    public Sound zombie_attaque;
+    public Sound zombie_die;
     EnemyCombat enemyCombat;
     bool scream = false;
 
@@ -42,7 +43,7 @@ public class Enemy1 : Enemy
         {
             if (!scream)
             {
-                mort_scream.source.Play();
+                zombie_scream.source.Play();
                 scream = true;
             }
             agent.SetDestination(player.transform.position);
@@ -64,30 +65,40 @@ public class Enemy1 : Enemy
         {
             scream = false;
         }
-        if (isRunning && !isAttacking)
+        if (!isRunning && !isAttacking && !zombie_grrr.source.isPlaying)
         {
-            if (!mort_run.source.isPlaying)
+            Debug.Log(ennemy);
+            zombie_grrr.source.Play();
+        }
+        else if (isRunning && !isAttacking)
+        {
+            // if (zombie_grrr.source.isPlaying)
+            // {
+            //     zombie_grrr.source.Stop();
+            // }
+            if (!zombie_run.source.isPlaying)
             {
-                mort_run.source.Play();
+                zombie_run.source.Play();
             }
         }
         else if (isAttacking)
         {
-            // if (mort_grrr.source.isPlaying)
+            // if (zombie_grrr.source.isPlaying)
             // {
-            //     mort_grrr.source.Play();
+            //     zombie_grrr.source.Play();
             // }
 
-            // if (mort_run.source.isPlaying)
+            // if (zombie_run.source.isPlaying)
             // {
-            //     mort_run.source.Stop();
+            //     zombie_run.source.Stop();
             // }
 
-            if (!mort_attaque.source.isPlaying)
+            if (!zombie_attaque.source.isPlaying)
             {
-                mort_attaque.source.Play();
+                zombie_attaque.source.Play();
             }
 
+            //zombie_attaque
         }
     }
 
@@ -102,9 +113,10 @@ public class Enemy1 : Enemy
 
     void setSounds()
     {
-        mort_run = FindObjectOfType<AudioManager>().getAudio("mort_run");
-        mort_scream = FindObjectOfType<AudioManager>().getAudio("mort_scream");
-        mort_attaque = FindObjectOfType<AudioManager>().getAudio("mort_attaque");
-        mort_die = FindObjectOfType<AudioManager>().getAudio("mort_die");
+        zombie_grrr = FindObjectOfType<AudioManager>().getAudio("zombie_grrr");
+        zombie_run = FindObjectOfType<AudioManager>().getAudio("zombie_run");
+        zombie_scream = FindObjectOfType<AudioManager>().getAudio("zombie_scream");
+        zombie_attaque = FindObjectOfType<AudioManager>().getAudio("zombie_attaque");
+        zombie_die = FindObjectOfType<AudioManager>().getAudio("zombie_die");
     }
 }
