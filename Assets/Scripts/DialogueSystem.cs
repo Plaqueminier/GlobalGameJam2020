@@ -26,8 +26,8 @@ public class DialogueSystem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-            GetComponent<DialogueSystem>().playNextReply();
+        // if (Input.GetButtonDown("Fire1"))
+        //     GetComponent<DialogueSystem>().playNextReply();
         if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Submit"))
             GetComponent<DialogueSystem>().GoToNext();
         if (isDisplaying) {
