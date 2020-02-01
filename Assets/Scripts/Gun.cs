@@ -40,6 +40,11 @@ public class Gun : MonoBehaviour
 
             GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactGO, 2f);
+
+            //  sounds //
+            FindObjectOfType<AudioManager>().Play("test");
+
+
         }
 
     }
