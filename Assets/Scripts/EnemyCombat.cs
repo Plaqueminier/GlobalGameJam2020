@@ -20,18 +20,23 @@ public class EnemyCombat : MonoBehaviour
         attackCooldown -= Time.deltaTime;
     }
 
-    public void Attack()
+    public void Attack(Enemy1 enemy, PlayerManager player)
     {
         if (attackCooldown <= 0f) {
-            StartCoroutine("DoDamage", attackDelay);
+            StartCoroutine(DoDamage(attackDelay, enemy, player));
             attackCooldown = 1f / attackSpeed;
         }
     }
 
-    IEnumerator DoDamage(float delay)
+    IEnumerator DoDamage(float delay, Enemy1 enemy, PlayerManager player)
     {
         yield return new WaitForSeconds(delay);
-        Debug.Log("Player take damage");
-        player.TakeDamage(damage);
+        float distance = Vector3.Distance(enemy.transform.position, player.transform.position);
+        if (distance <= enemy.attackRadius) {
+            Debug.Log("Player take damage");
+            player.TakeDamage(damage);
+        } else {
+            Debug.Log("Player went too far to be attacked");
+        }
     }
 }

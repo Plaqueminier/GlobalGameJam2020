@@ -36,7 +36,7 @@ public class Enemy1 : MonoBehaviour
                 isAttacking = true;
                 animator.SetBool("isRunning", isRunning);
                 animator.SetBool("isAttacking", isAttacking);
-                enemyCombat.Attack();
+                enemyCombat.Attack(this, player);
             } else {
                 isRunning = true;
                 animator.SetBool("isRunning", isRunning);
