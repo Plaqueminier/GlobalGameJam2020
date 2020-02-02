@@ -144,7 +144,22 @@ MonoBehaviour:
     volume: 1
     pitch: 0.92
     source: {fileID: 0}
-  - name: Button_settings
+  - name: boss_die
+    clip: {fileID: 8300000, guid: fc29cdb01aaba6b43bb0e099c39489f2, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: vague1
+    clip: {fileID: 8300000, guid: d355beff6b4c3a44d8cd5137ac4a2ac3, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: vague2
+    clip: {fileID: 8300000, guid: c2a071c58fc4b654a9b99140c6005731, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: mainMenu
     clip: {fileID: 8300000, guid: 24b6c9bdec8cc344daac86373fd696c0, type: 3}
     volume: 1
     pitch: 0.92

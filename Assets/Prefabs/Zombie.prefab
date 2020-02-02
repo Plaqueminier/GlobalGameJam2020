@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 3
-  lookRadius: 9
+  lookRadius: 1000
   animator: {fileID: 5004167965770176289}
   ennemy: {fileID: 983764868301159561}
   zombie_run:
