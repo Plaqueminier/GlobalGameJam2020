@@ -114,4 +114,13 @@ public class PlayerManager : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
     }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody body = hit.collider.attachedRigidbody;
+
+        if (body == null || body.isKinematic)
+            return;
+        body.velocity = new Vector3(0, 0, 0);
+    }
 }
