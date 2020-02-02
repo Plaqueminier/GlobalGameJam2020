@@ -12,6 +12,7 @@ public class MobWaves : MonoBehaviour
     int wave1Size;
     int wave2Size;
     int wave3Size;
+    public DialogueSystem dialogueSystem;
 
     void Start()
     {
@@ -20,6 +21,14 @@ public class MobWaves : MonoBehaviour
         wave1Size = wave1.Count;
         wave2Size = wave2.Count;
         wave3Size = wave3.Count;
+        dialogueSystem.playNextReply();
+        StartCoroutine("LateStart");
+    }
+
+    IEnumerator LateStart()
+    {
+        yield return new WaitForSeconds(0.1f);
+        dialogueSystem.playNextReply();
     }
 
     void Update()
@@ -62,6 +71,7 @@ public class MobWaves : MonoBehaviour
     void launchWave1()
     {
         waveNb += 1;
+        dialogueSystem.playNextReply();
         foreach(GameObject mob in wave1)
         {
             mob.SetActive(true);
@@ -71,6 +81,7 @@ public class MobWaves : MonoBehaviour
     void launchWave2()
     {
         waveNb += 1;
+        dialogueSystem.playNextReply();
         foreach(GameObject mob in wave2)
         {
             mob.SetActive(true);
@@ -80,6 +91,7 @@ public class MobWaves : MonoBehaviour
     void launchWave3()
     {
         waveNb += 1;
+        dialogueSystem.playNextReply();
         foreach(GameObject mob in wave3)
         {
             mob.SetActive(true);

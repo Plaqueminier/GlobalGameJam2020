@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8337172553284028890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8337172553284028884}
+  - component: {fileID: 8337172553284028891}
+  - component: {fileID: 8337172553284028885}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8337172553284028884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8337172553284028890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1334.569, y: 364.68976, z: -177.60599}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8337172553284028891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8337172553284028890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9794fc4cedbde2468326115cacd8392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  textMesh: {fileID: 0}
+  displayDelay: 0.01
+  isDisplaying: 0
+  replies:
+  - 'P : Comment puis-je vous aider ?'
+  - "J : J'ai l\u2019impression d'avoir perdu mon coeur."
+  - "J : Une vie de souffrance m\u2019a men\xE9(e) \xE0 grandir sans bases affectives,
+    n\u2019ayant connu que violence en lieu de proches depuis ma naissance."
+  - "J : Semblable \xE0 la d\xE9couverte du soleil au sortir d\u2019une existence
+    d\u2019ombre je pensais avoir enfin trouv\xE9 l\u2019amour qui a toujours \xE9t\xE9
+    ma raison de vivre."
+  - "J : H\xE9las le traumatisme de sa perte m\u2019a replong\xE9(e) dans des t\xE9n\xE8bres
+    encore plus profondes."
+  - "J : Mon existence ainsi priv\xE9e de son sens et mon sentiment de ma valeur
+    reni\xE9, je sombre dans le d\xE9sespoir, ne voyant plus d\u2019autre d\xE9livrance
+    que la mort."
+  - "P : Je vois. Je vais vous aider \xE0 trouver de nouvelles perspectives de vie
+    pour que vous puissiez surmonter cette \xE9preuve et aller de l'avant."
+  - "Trouvez tout ce qui vous fait vous sentir mieux, ce qui vous anime et vous porte
+    pour tenir un jour de plus. Appr\xE9ciez chaque instant agr\xE9able et le miracle
+    de la vie avec ses potentialit\xE9s."
+  - "Votre souffrance vous ayant men\xE9(e) jusqu'\xE0 sa limite, vous avez s\xFBrement
+    surv\xE9cu pour une bonne raison. Je suis persuad\xE9 que vous avez beaucoup
+    \xE0 apporter \xE0 ce monde."
+  - "Votre connaissance de la souffrance vous y rend sensible et capable de compassion
+    et de soutien d'autres personnes dans la douleur. Vous pouvez apaiser, inspirer
+    et donner du courage \xE0 nombre de gens."
+  - "Si vous inversez votre perspective, vous pouvez transformer votre carence affective
+    en r\xE9alisation de la richesse et quantit\xE9 d'amour que vous avez \xE0 partager."
+  - "Votre richesse int\xE9rieure du fait de votre exp\xE9rience unique vous donne
+    une valeur inimitable. Cela vous rend en soi digne d'amour."
+  - La personne qui vous correspond est certainement en chemin pour vous rencontrer
+    dans un futur proche. Plus vous entrez en contact avec de nouvelles personnes
+    enrichissantes, plus vous gagnez en confiance en vous exprimant authentiquement,
+    plus vous vous rapprochez de cette personne.
+  repliesIsPlayedJustAfter: 01010101010100010001000100
+--- !u!114 &8337172553284028885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8337172553284028890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c019be198875e4586840ea243a3465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
