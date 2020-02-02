@@ -17,6 +17,8 @@ public class PlayerManager : MonoBehaviour
     public Sprite fullHeart;
     public Sprite halfHeart;
 
+    bool inCriticalHealth = false;
+
     void Awake()
     {
         inputPaused = false;
@@ -39,18 +41,21 @@ public class PlayerManager : MonoBehaviour
 
         if (health > 5)
         {
+            inCriticalHealth = false;
             hearts[0].sprite = fullHeart;
             hearts[1].sprite = fullHeart;
             hearts[2].sprite = fullHeart;
         }
         else if (health > 4)
         {
+            inCriticalHealth = false;
             hearts[0].sprite = fullHeart;
             hearts[1].sprite = fullHeart;
             hearts[2].sprite = halfHeart;
         }
         else if (health > 3)
         {
+            inCriticalHealth = false;
             hearts[0].sprite = fullHeart;
             hearts[1].sprite = fullHeart;
             hearts[2].enabled = false;
@@ -90,6 +95,16 @@ public class PlayerManager : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("damage");
         }
         health -= damage;
+
+        if (health < 3)
+        {
+            inCriticalHealth = true;
+            if (!FindObjectOfType<AudioManager>().IsPlaying("critical_damage"))
+            {
+                FindObjectOfType<AudioManager>().Play("critical_damage");
+            }
+        }
+
         if (health <= 0)
         {
             // Die

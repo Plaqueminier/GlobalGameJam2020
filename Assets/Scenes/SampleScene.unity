@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58ce7267490bfb840af368f9757224d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db867120160d70442adc95b6bf20c3de, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -768,9 +768,9 @@ MonoBehaviour:
     pitch: 1.62
     source: {fileID: 0}
   - name: critical_damage
-    clip: {fileID: 8300000, guid: ff236923916053f4c931fd381a931963, type: 3}
-    volume: 0.41
-    pitch: 1.62
+    clip: {fileID: 8300000, guid: e42f4fbe599580347923c45a42af103e, type: 3}
+    volume: 1
+    pitch: 0.92
     source: {fileID: 0}
 --- !u!4 &695111934
 Transform:
@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58ce7267490bfb840af368f9757224d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db867120160d70442adc95b6bf20c3de, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58ce7267490bfb840af368f9757224d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db867120160d70442adc95b6bf20c3de, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1867,7 +1867,7 @@ PrefabInstance:
     - target: {fileID: 901320870966472355, guid: 3c3f27ce34ac8794a901ca027991073e,
         type: 3}
       propertyPath: health
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 901320870966472355, guid: 3c3f27ce34ac8794a901ca027991073e,
         type: 3}
@@ -1893,13 +1893,19 @@ PrefabInstance:
         type: 3}
       propertyPath: fullHeart
       value: 
-      objectReference: {fileID: 21300000, guid: 58ce7267490bfb840af368f9757224d9,
+      objectReference: {fileID: 21300000, guid: db867120160d70442adc95b6bf20c3de,
         type: 3}
     - target: {fileID: 901320870966472355, guid: 3c3f27ce34ac8794a901ca027991073e,
         type: 3}
       propertyPath: emptyHeart
       value: 
       objectReference: {fileID: 21300000, guid: 0dab45beef20b4d4b8a0c50095571329,
+        type: 3}
+    - target: {fileID: 901320870966472355, guid: 3c3f27ce34ac8794a901ca027991073e,
+        type: 3}
+      propertyPath: halfHeart
+      value: 
+      objectReference: {fileID: 21300000, guid: ea614dccdb5eefa41b8377b339d0c9de,
         type: 3}
     - target: {fileID: 901320870966472358, guid: 3c3f27ce34ac8794a901ca027991073e,
         type: 3}
