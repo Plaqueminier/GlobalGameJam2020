@@ -147,6 +147,8 @@ MonoBehaviour:
   health: 50
   impactEffect: {fileID: 2537715553073900801, guid: 18c0f1463e83d4643942f524cd3a17a1,
     type: 3}
+  BloodEffect: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc,
+    type: 3}
 --- !u!114 &7013899774458605800
 MonoBehaviour:
   m_ObjectHideFlags: 0
