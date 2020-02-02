@@ -88,12 +88,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8907a0db993385c469f170967b2a4d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 6
   inputPaused: 0
-  hearts: []
-  numOfHearts: 0
-  fullHeart: {fileID: 0}
-  halfHeart: {fileID: 0}
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  numOfHearts: 3
+  fullHeart: {fileID: 21300000, guid: db867120160d70442adc95b6bf20c3de, type: 3}
+  halfHeart: {fileID: 21300000, guid: ea614dccdb5eefa41b8377b339d0c9de, type: 3}
 --- !u!1 &901320871005462998
 GameObject:
   m_ObjectHideFlags: 0

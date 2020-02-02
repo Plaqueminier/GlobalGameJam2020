@@ -109,6 +109,8 @@ public class PlayerManager : MonoBehaviour
         if (health <= 0)
         {
             // Die
+
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("GameOver");
         }
     }
