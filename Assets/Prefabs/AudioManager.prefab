@@ -129,3 +129,23 @@ MonoBehaviour:
     volume: 1
     pitch: 0.92
     source: {fileID: 0}
+  - name: boss_run
+    clip: {fileID: 8300000, guid: ab423fa975fcc244cbccd9a4a7dce1a3, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: boss_scream
+    clip: {fileID: 8300000, guid: cec955f6830cc64449dcc8493341533e, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: boss_attaque
+    clip: {fileID: 8300000, guid: e59bfe7a9912a6647a584437e4a34019, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: Button_settings
+    clip: {fileID: 8300000, guid: 24b6c9bdec8cc344daac86373fd696c0, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}

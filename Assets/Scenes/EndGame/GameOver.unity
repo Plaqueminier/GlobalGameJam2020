@@ -324,8 +324,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278253055
+  m_fontColor: {r: 1, g: 0.9591135, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -538,8 +538,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fc6b3fbd7f9aba1478a929b0ff663cb4, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -568,6 +568,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e512df0cc35a66499d37264b094db00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &692073873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.465046
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2727237
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50.26566
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034065, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865092623213034067, guid: ca53f7bfd94cb37409284a4e910866d9,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca53f7bfd94cb37409284a4e910866d9, type: 3}
 --- !u!1 &741233261
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,8 +793,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278251263
+  m_fontColor: {r: 1, g: 0.9337245, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1010,8 +1079,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fc6b3fbd7f9aba1478a929b0ff663cb4, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

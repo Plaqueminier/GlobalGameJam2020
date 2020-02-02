@@ -103,6 +103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  impactEffect: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9,
+    type: 3}
+  BloodEffect: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc,
+    type: 3}
 --- !u!114 &5329742548039977951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,31 +234,25 @@ MonoBehaviour:
   lookRadius: 20
   animator: {fileID: 3430633936556072944}
   ennemy: {fileID: 983764868301159561}
-  zombie_grrr:
+  boss_run:
     name: 
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
-  zombie_run:
+  boss_scream:
     name: 
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
-  zombie_scream:
+  boss_attaque:
     name: 
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
-  zombie_attaque:
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    source: {fileID: 0}
-  zombie_die:
+  boss_die:
     name: 
     clip: {fileID: 0}
     volume: 0

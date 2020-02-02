@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/EffectExamples/Editor/PackageManagerAssembly/PackageImportList.txt.meta
+guid: b74d4d749bb7ee04f955cdf2a53a9689
+TextScriptImporter:
+=======
 guid: 3d1839e9dc9686f4699edd229a15bf3d
 PrefabImporter:
+>>>>>>> 35753eff9781b5d56677b831ad9f5c7921e8cead:Assets/Prefabs/Boss.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/EffectExamples/Editor.meta
+guid: de2f291a5b7e50c4cab022cb8a1b835e
+=======
 guid: 0b1d898f8ee5bfc4983a0c526dbfdca7
+>>>>>>> 35753eff9781b5d56677b831ad9f5c7921e8cead:Assets/Models/Boss.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

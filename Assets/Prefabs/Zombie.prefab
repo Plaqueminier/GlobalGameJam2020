@@ -50,7 +50,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 3
@@ -103,6 +103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  impactEffect: {fileID: 2537715553073900801, guid: 18c0f1463e83d4643942f524cd3a17a1,
+    type: 3}
+  BloodEffect: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc,
+    type: 3}
 --- !u!114 &5329742548039977951
 MonoBehaviour:
   m_ObjectHideFlags: 0

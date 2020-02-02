@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/EffectExamples/Editor/PackageManagerAssembly.meta
+guid: d56bdd96220dc8a45bb4663ac9a7c914
+=======
 guid: 012869596d522b148a6ae8fe980be1c9
+>>>>>>> 35753eff9781b5d56677b831ad9f5c7921e8cead:Assets/Models/Boss/Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
