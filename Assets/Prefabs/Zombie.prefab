@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4b2e7ef2cd5f34bb55dae10d6eb4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 8
-  lookRadius: 20
+  attackRadius: 3
+  lookRadius: 9
   animator: {fileID: 5004167965770176289}
   ennemy: {fileID: 983764868301159561}
   zombie_run:

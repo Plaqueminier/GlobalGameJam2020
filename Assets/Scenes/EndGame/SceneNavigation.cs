@@ -3,26 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneNavigation : MonoBehaviour
-{
-    public void selectScene()
-    {
-        Cursor.lockState = (Cursor.lockState == CursorLockMode.Locked) ? CursorLockMode.None : CursorLockMode.Locked;
+public class SceneNavigation : MonoBehaviour {
+    public void selectScene () {
+        Cursor.lockState = CursorLockMode.None;
 
-        Debug.Log(this.gameObject.name);
-        switch (this.gameObject.name)
-        {
+        Debug.Log (this.gameObject.name);
+        switch (this.gameObject.name) {
             case "Replau":
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene ("SampleScene");
                 break;
             case "Quit":
-                Application.Quit();
+                Application.Quit ();
                 break;
             case "Credit":
-                Debug.Log("Crédits....");
+                Debug.Log ("Crédits....");
                 break;
             default:
-                Debug.Log("Autre....");
+                Debug.Log ("Autre....");
                 break;
         }
     }
