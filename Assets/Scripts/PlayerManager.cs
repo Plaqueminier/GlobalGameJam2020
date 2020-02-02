@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
 
-    public float health;
+    public float health = 6;
     public bool inputPaused;
     public static PlayerManager instance;
 
@@ -15,7 +15,7 @@ public class PlayerManager : MonoBehaviour
     public int numOfHearts;
 
     public Sprite fullHeart;
-    public Sprite emptyHeart;
+    public Sprite halfHeart;
 
     void Awake()
     {
@@ -36,26 +36,51 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < health)
-            {
-                hearts[i].sprite = fullHeart;
-            }
-            else
-            {
-                hearts[i].sprite = emptyHeart;
-            }
-            if (i < numOfHearts)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
 
+        if (health > 5)
+        {
+            hearts[0].sprite = fullHeart;
+            hearts[1].sprite = fullHeart;
+            hearts[2].sprite = fullHeart;
         }
+        else if (health > 4)
+        {
+            hearts[0].sprite = fullHeart;
+            hearts[1].sprite = fullHeart;
+            hearts[2].sprite = halfHeart;
+        }
+        else if (health > 3)
+        {
+            hearts[0].sprite = fullHeart;
+            hearts[1].sprite = fullHeart;
+            hearts[2].enabled = false;
+        }
+        else if (health > 2)
+        {
+            hearts[0].sprite = fullHeart;
+            hearts[1].sprite = halfHeart;
+            hearts[2].enabled = false;
+        }
+        else if (health > 1)
+        {
+            hearts[0].sprite = fullHeart;
+            hearts[1].enabled = false;
+            hearts[2].enabled = false;
+        }
+        else if (health > 0)
+        {
+            hearts[0].sprite = halfHeart;
+            hearts[1].enabled = false;
+            hearts[2].enabled = false;
+        }
+        else
+        {
+            hearts[0].enabled = false;
+            hearts[1].enabled = false;
+            hearts[2].enabled = false;
+        }
+
+
     }
 
     public void TakeDamage(float damage)
