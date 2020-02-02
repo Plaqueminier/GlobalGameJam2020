@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 3.3
-  lookRadius: 12
+  lookRadius: 10000
   animator: {fileID: 2667930724358276296}
   ennemy: {fileID: 2667930723295430590}
   mort_run:
