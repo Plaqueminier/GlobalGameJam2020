@@ -7,6 +7,7 @@ public class DialogueSystem : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TextMeshProUGUI textMesh;
+    public PlayerManager playerManager;
     private string textStr;
     private float timerDelay;
     public float displayDelay = 0.1f;
@@ -23,6 +24,7 @@ public class DialogueSystem : MonoBehaviour
     {
         timerDelay = displayDelay;
         replyCount = 0;
+        playerManager = PlayerManager.instance;
     }
 
     void Update()
@@ -50,6 +52,7 @@ public class DialogueSystem : MonoBehaviour
         currentCount = 0;
         maxCount = textStr.Length;
         isDisplaying = true;
+        playerManager.inputPaused = true;
         isPlayedAfter = playedAfter;
     }
 
@@ -77,5 +80,6 @@ public class DialogueSystem : MonoBehaviour
         textMesh.text = textStr.Substring(0, currentCount);
         // Debug.Log(textMesh.characterInfo[0]);
         isDisplaying = false;
+        playerManager.inputPaused = false;
     }
 }

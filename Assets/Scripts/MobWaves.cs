@@ -24,7 +24,6 @@ public class MobWaves : MonoBehaviour
         wave1Size = wave1.Count;
         wave2Size = wave2.Count;
         wave3Size = wave3.Count;
-        dialogueSystem.playNextReply();
         StartCoroutine("LateStart");
     }
 
@@ -64,7 +63,10 @@ public class MobWaves : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        launchWave1();
+        if (!isTriggered) {
+            launchWave1();
+            isTriggered = true;
+        }
     }
 
     void launchWave1()
