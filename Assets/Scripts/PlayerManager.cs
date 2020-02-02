@@ -40,7 +40,8 @@ public class PlayerManager : MonoBehaviour
 	{
 		Rigidbody body = hit.collider.attachedRigidbody;
 
-		if (body)
-			body.velocity = new Vector3(0, 0, 0);
+		if (body) {
+            body.velocity = new Vector3(0, 0, 0);
+        }
 	}
 }
