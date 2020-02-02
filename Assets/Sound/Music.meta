@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sound/Music.meta
 guid: d99962e02bb5ccf4381615de72b7ef35
+=======
+guid: f4308b613eb0a5b47800f7b72881ef4e
+>>>>>>> 35753eff9781b5d56677b831ad9f5c7921e8cead:Assets/Models/Boss/mutant.fbm.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
