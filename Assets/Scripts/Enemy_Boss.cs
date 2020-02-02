@@ -13,11 +13,10 @@ public class Enemy_Boss : Enemy
     public float lookRadius = 20f;
     public Animator animator;
     public GameObject ennemy;
-    public Sound zombie_grrr;
-    public Sound zombie_run;
-    public Sound zombie_scream;
-    public Sound zombie_attaque;
-    public Sound zombie_die;
+    public Sound boss_run;
+    public Sound boss_scream;
+    public Sound boss_attaque;
+    public Sound boss_die;
     EnemyCombat enemyCombat;
     bool scream = false;
 
@@ -42,7 +41,7 @@ public class Enemy_Boss : Enemy
         {
             if (!scream)
             {
-                zombie_scream.source.Play();
+                boss_scream.source.Play();
                 scream = true;
             }
             agent.SetDestination(player.transform.position);
@@ -64,40 +63,26 @@ public class Enemy_Boss : Enemy
         {
             scream = false;
         }
-        if (!isRunning && !isAttacking && !zombie_grrr.source.isPlaying)
+        if (!isRunning && !isAttacking)
         {
             Debug.Log(ennemy);
-            zombie_grrr.source.Play();
         }
         else if (isRunning && !isAttacking)
         {
-            // if (zombie_grrr.source.isPlaying)
-            // {
-            //     zombie_grrr.source.Stop();
-            // }
-            if (!zombie_run.source.isPlaying)
+            if (!boss_run.source.isPlaying)
             {
-                zombie_run.source.Play();
+                boss_run.source.Play();
             }
         }
         else if (isAttacking)
         {
-            // if (zombie_grrr.source.isPlaying)
-            // {
-            //     zombie_grrr.source.Play();
-            // }
 
-            // if (zombie_run.source.isPlaying)
-            // {
-            //     zombie_run.source.Stop();
-            // }
-
-            if (!zombie_attaque.source.isPlaying)
+            if (!boss_attaque.source.isPlaying)
             {
-                zombie_attaque.source.Play();
+                boss_attaque.source.Play();
             }
 
-            //zombie_attaque
+            //boss_attaque
         }
     }
 
@@ -112,10 +97,9 @@ public class Enemy_Boss : Enemy
 
     void setSounds()
     {
-        zombie_grrr = FindObjectOfType<AudioManager>().getAudio("zombie_grrr");
-        zombie_run = FindObjectOfType<AudioManager>().getAudio("zombie_run");
-        zombie_scream = FindObjectOfType<AudioManager>().getAudio("zombie_scream");
-        zombie_attaque = FindObjectOfType<AudioManager>().getAudio("zombie_attaque");
-        zombie_die = FindObjectOfType<AudioManager>().getAudio("zombie_die");
+        boss_run = FindObjectOfType<AudioManager>().getAudio("boss_run");
+        boss_scream = FindObjectOfType<AudioManager>().getAudio("boss_scream");
+        boss_attaque = FindObjectOfType<AudioManager>().getAudio("boss_attaque");
+        boss_die = FindObjectOfType<AudioManager>().getAudio("boss_die");
     }
 }
