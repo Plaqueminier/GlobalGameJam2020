@@ -34,32 +34,45 @@ public class MobWaves : MonoBehaviour
     void Update()
     {
         int i = 0;
-        if (waveNb == 1) {
-            foreach(GameObject mob in wave1)
+        if (waveNb == 1)
+        {
+            foreach (GameObject mob in wave1)
             {
                 if (!mob)
                     i += 1;
             }
             if (i == wave1Size)
                 launchWave2();
-        } else if (waveNb == 2) {
-            foreach(GameObject mob in wave2)
+        }
+        else if (waveNb == 2)
+        {
+            foreach (GameObject mob in wave2)
             {
                 if (!mob)
                     i += 1;
             }
-            if (i == wave2Size) {
+            if (i == wave2Size)
+            {
                 waveNb += 1;
                 launchWave3();
             }
-        } else if (waveNb == 3) {
-            foreach(GameObject mob in wave3)
+        }
+        else if (waveNb == 3)
+        {
+            foreach (GameObject mob in wave3)
             {
                 if (!mob)
                     i += 1;
             }
             if (i == wave3Size)
+            {
                 Debug.Log("FINI");
+
+                if (!FindObjectOfType<AudioManager>().IsPlaying("victory"))
+                {
+                    FindObjectOfType<AudioManager>().Play("victory");
+                }
+            }
         }
     }
 
@@ -72,7 +85,7 @@ public class MobWaves : MonoBehaviour
     {
         waveNb += 1;
         dialogueSystem.playNextReply();
-        foreach(GameObject mob in wave1)
+        foreach (GameObject mob in wave1)
         {
             mob.SetActive(true);
         }
@@ -82,7 +95,7 @@ public class MobWaves : MonoBehaviour
     {
         waveNb += 1;
         dialogueSystem.playNextReply();
-        foreach(GameObject mob in wave2)
+        foreach (GameObject mob in wave2)
         {
             mob.SetActive(true);
         }
@@ -92,7 +105,7 @@ public class MobWaves : MonoBehaviour
     {
         waveNb += 1;
         dialogueSystem.playNextReply();
-        foreach(GameObject mob in wave3)
+        foreach (GameObject mob in wave3)
         {
             mob.SetActive(true);
         }

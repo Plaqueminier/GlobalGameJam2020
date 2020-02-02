@@ -110,6 +110,10 @@ public class PlayerManager : MonoBehaviour
         {
             // Die
 
+            if (!FindObjectOfType<AudioManager>().IsPlaying("MORT"))
+            {
+                FindObjectOfType<AudioManager>().Play("MORT");
+            }
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("GameOver");
         }

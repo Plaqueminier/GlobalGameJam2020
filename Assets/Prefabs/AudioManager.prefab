@@ -160,7 +160,27 @@ MonoBehaviour:
     pitch: 0.92
     source: {fileID: 0}
   - name: mainMenu
-    clip: {fileID: 8300000, guid: 24b6c9bdec8cc344daac86373fd696c0, type: 3}
+    clip: {fileID: 8300000, guid: 17b7e80489fd50f4ab78414480a49742, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: ambiance
+    clip: {fileID: 8300000, guid: a7f66e20f0fee0648ba520333b94f6f6, type: 3}
+    volume: 0.718
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: MORT
+    clip: {fileID: 8300000, guid: 26a6baa821cd3954cb95762ff560e993, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: victory
+    clip: {fileID: 8300000, guid: 2528f3feffe079545a560e3d2b083bd0, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: ambiance
+    clip: {fileID: 8300000, guid: a7f66e20f0fee0648ba520333b94f6f6, type: 3}
     volume: 1
     pitch: 0.92
     source: {fileID: 0}
