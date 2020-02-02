@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -108,6 +109,7 @@ public class PlayerManager : MonoBehaviour
         if (health <= 0)
         {
             // Die
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

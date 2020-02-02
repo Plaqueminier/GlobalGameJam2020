@@ -312,6 +312,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503573580356714912, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: attackRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503573580356714912, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503573580356714912, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: ennemy
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957978819546346032, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329742548039977951, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329742548039977951, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: attackSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329742548039977951, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: attackDelay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdab589171ac29149aa6336fa2ef4ccb, type: 3}
 --- !u!4 &328860532 stripped
@@ -387,6 +422,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 1503573580356714912, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: attackRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503573580356714912, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503573580356714912, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: ennemy
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957978819546346032, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329742548039977951, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329742548039977951, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: attackSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329742548039977951, guid: fdab589171ac29149aa6336fa2ef4ccb,
+        type: 3}
+      propertyPath: attackDelay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdab589171ac29149aa6336fa2ef4ccb, type: 3}
 --- !u!4 &329845515 stripped
@@ -394,12 +464,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 983764868301159556, guid: fdab589171ac29149aa6336fa2ef4ccb,
     type: 3}
   m_PrefabInstance: {fileID: 329845514}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &418068744 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2667930723295430590, guid: 1c308a575a67d46419563bcff3f5e78c,
-    type: 3}
-  m_PrefabInstance: {fileID: 925754787}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &435502657
 GameObject:
@@ -521,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c019be198875e4586840ea243a3465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 909090863}
+  pauseMenu: {fileID: 0}
 --- !u!114 &539149107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,27 +600,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 0}
   textMesh: {fileID: 0}
-  displayDelay: 0.01
+  displayDelay: 0.1
   isDisplaying: 0
-  replies:
-  - "Trouvez tout ce qui vous fait vous sentir mieux, ce qui vous anime et vous porte
-    pour tenir un jour de plus. Appr\xE9ciez chaque instant agr\xE9able et le miracle
-    de la vie avec ses potentialit\xE9s."
-  - "Votre souffrance vous ayant men\xE9(e) jusqu'\xE0 sa limite, vous avez s\xFBrement
-    surv\xE9cu pour une bonne raison. Je suis persuad\xE9 que vous avez beaucoup
-    \xE0 apporter \xE0 ce monde."
-  - "Votre connaissance de la souffrance vous y rend sensible et capable de compassion
-    et de soutien d'autres personnes dans la douleur. Vous pouvez apaiser, inspirer
-    et donner du courage \xE0 nombre de gens."
-  - "Si vous inversez votre perspective, vous pouvez transformer votre carence affective
-    en r\xE9alisation de la richesse et quantit\xE9 d'amour que vous avez \xE0 partager."
-  - "Votre richesse int\xE9rieure du fait de votre exp\xE9rience unique vous donne
-    une valeur inimitable. Cela vous rend en soi digne d'amour."
-  - La personne qui vous correspond est certainement en chemin pour vous rencontrer
-    dans un futur proche. Plus vous entrez en contact avec de nouvelles personnes
-    enrichissantes, plus vous gagnez en confiance en vous exprimant authentiquement,
-    plus vous vous rapprochez de cette personne.
-  repliesIsPlayedJustAfter: 010001000100
+  replies: []
+  repliesIsPlayedJustAfter: 
 --- !u!4 &539149108
 Transform:
   m_ObjectHideFlags: 0
@@ -706,72 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a18cc3f7ff6824fb4112c588f75083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: wall
-    clip: {fileID: 8300000, guid: b55fc36234ffcf64e92a442798a68258, type: 3}
-    volume: 0.52
-    pitch: 1.79
-    source: {fileID: 0}
-  - name: fireLaser
-    clip: {fileID: 8300000, guid: bb59863cc7857e847a2f58a9e9169410, type: 3}
-    volume: 0.23
-    pitch: 1.15
-    source: {fileID: 0}
-  - name: zombie_scream
-    clip: {fileID: 8300000, guid: 9209a900672a10540bab2ccb2bbda6bd, type: 3}
-    volume: 0.35
-    pitch: 1.53
-    source: {fileID: 0}
-  - name: zombie_run
-    clip: {fileID: 8300000, guid: b6afe2691a6eb2949bfa12dd59cf0117, type: 3}
-    volume: 0.35
-    pitch: 1.57
-    source: {fileID: 0}
-  - name: mort_scream
-    clip: {fileID: 8300000, guid: 0129bdd283f32f4438bb13d3b143db63, type: 3}
-    volume: 0.52
-    pitch: 1.86
-    source: {fileID: 0}
-  - name: zombie_attaque
-    clip: {fileID: 8300000, guid: e06d116428a841c47aaafeac82ca9898, type: 3}
-    volume: 0.43
-    pitch: 1.82
-    source: {fileID: 0}
-  - name: zombie_die
-    clip: {fileID: 8300000, guid: ff236923916053f4c931fd381a931963, type: 3}
-    volume: 0.41
-    pitch: 1.62
-    source: {fileID: 0}
-  - name: mort_run
-    clip: {fileID: 8300000, guid: 67b3aaa720a0ec247a336d4b2e8d416f, type: 3}
-    volume: 0.41
-    pitch: 1.62
-    source: {fileID: 0}
-  - name: mort_attaque
-    clip: {fileID: 8300000, guid: 004be343ff2e3b648a3df3d3efccbe3e, type: 3}
-    volume: 0.41
-    pitch: 1.62
-    source: {fileID: 0}
-  - name: zombie_run2
-    clip: {fileID: 8300000, guid: 8588e31fec012e1439b5f6804b42d644, type: 3}
-    volume: 0.41
-    pitch: 1.62
-    source: {fileID: 0}
-  - name: mort_die
-    clip: {fileID: 8300000, guid: 6a0b04b5dbd3ff44ca4aef850f7422f2, type: 3}
-    volume: 1
-    pitch: 0.92
-    source: {fileID: 0}
-  - name: damage
-    clip: {fileID: 8300000, guid: c1d705f183a93dd4293898d738af5279, type: 3}
-    volume: 0.41
-    pitch: 1.62
-    source: {fileID: 0}
-  - name: critical_damage
-    clip: {fileID: 8300000, guid: e42f4fbe599580347923c45a42af103e, type: 3}
-    volume: 1
-    pitch: 0.92
-    source: {fileID: 0}
+  sounds: []
 --- !u!4 &695111934
 Transform:
   m_ObjectHideFlags: 0
@@ -879,12 +861,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837271769}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &909090863 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9027414919441034507, guid: f0af70272b29ea545aec7180870b1ccd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1700653942}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &925754787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -892,26 +868,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 234715534}
     m_Modifications:
-    - target: {fileID: 2667930723295430577, guid: 1c308a575a67d46419563bcff3f5e78c,
-        type: 3}
-      propertyPath: attackRadius
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2667930723295430577, guid: 1c308a575a67d46419563bcff3f5e78c,
-        type: 3}
-      propertyPath: waitAttack
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2667930723295430577, guid: 1c308a575a67d46419563bcff3f5e78c,
-        type: 3}
-      propertyPath: waitNextAttack
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2667930723295430577, guid: 1c308a575a67d46419563bcff3f5e78c,
-        type: 3}
-      propertyPath: ennemy
-      value: 
-      objectReference: {fileID: 418068744}
     - target: {fileID: 2667930723295430579, guid: 1c308a575a67d46419563bcff3f5e78c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1668,7 +1624,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 2.3509887e-38, w: 9e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
