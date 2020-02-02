@@ -39,22 +39,12 @@ public class MobWaves : MonoBehaviour
         int i = 0;
         if (waveNb == 1)
         {
-            foreach (GameObject mob in wave1)
-            {
-                if (!mob)
-                    i += 1;
-            }
-            if (i == wave1Size)
+            if (wave1audio.gameObject.transform.childCount == 0)
                 launchWave2();
         }
         else if (waveNb == 2)
         {
-            foreach (GameObject mob in wave2)
-            {
-                if (!mob)
-                    i += 1;
-            }
-            if (i == wave2Size)
+            if (wave2audio.gameObject.transform.childCount == 0)
             {
                 waveNb += 1;
                 launchWave3();
@@ -62,15 +52,8 @@ public class MobWaves : MonoBehaviour
         }
         else if (waveNb == 3)
         {
-            foreach (GameObject mob in wave3)
+            if (wave3audio.gameObject.transform.childCount == 0)
             {
-                if (!mob)
-                    i += 1;
-            }
-            if (i == wave3Size)
-            {
-                Debug.Log("FINI");
-
                 if (!FindObjectOfType<AudioManager>().IsPlaying("victory"))
                 {
                     FindObjectOfType<AudioManager>().Play("victory");

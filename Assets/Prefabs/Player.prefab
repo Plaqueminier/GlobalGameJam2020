@@ -628,16 +628,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sci-fi_Gun LowPoly
       objectReference: {fileID: 0}
-    - target: {fileID: 6999098417396380551, guid: a1ee35466e1be0946a2037efcc6d45da,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6999098417396380551, guid: a1ee35466e1be0946a2037efcc6d45da,
-        type: 3}
-      propertyPath: m_Range
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 8262397533238699273, guid: a1ee35466e1be0946a2037efcc6d45da,
         type: 3}
       propertyPath: m_LocalPosition.y
