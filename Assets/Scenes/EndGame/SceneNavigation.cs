@@ -8,7 +8,10 @@ public class SceneNavigation : MonoBehaviour
 
     public void navigateToGame()
     {
-
+        if (!FindObjectOfType<AudioManager>().IsPlaying("Button_play"))
+        {
+            FindObjectOfType<AudioManager>().Play("Button_play");
+        }
         SceneManager.LoadScene("Scene1");
     }
 
@@ -20,6 +23,10 @@ public class SceneNavigation : MonoBehaviour
 
     public void QuitGame()
     {
+        if (!FindObjectOfType<AudioManager>().IsPlaying("Button_quit"))
+        {
+            FindObjectOfType<AudioManager>().Play("Button_quit");
+        }
         Cursor.lockState = CursorLockMode.None;
         Application.Quit();
     }

@@ -109,3 +109,23 @@ MonoBehaviour:
     volume: 1
     pitch: 0.92
     source: {fileID: 0}
+  - name: Button_play
+    clip: {fileID: 8300000, guid: f6134d79fa8c16c4cbe6380e30f73a3d, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: Button_quit
+    clip: {fileID: 8300000, guid: fe0b76011c8fedb46982c8f174684350, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: Button_replay
+    clip: {fileID: 8300000, guid: d6d1383abdb3b4341b6d9d0893f322e8, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+  - name: Button_settings
+    clip: {fileID: 8300000, guid: 24b6c9bdec8cc344daac86373fd696c0, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
