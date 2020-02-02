@@ -49,7 +49,7 @@ MonoBehaviour:
   displayDelay: 0.01
   isDisplaying: 0
   replies:
-  - 'P : Comment puis-je vous aider ?'
+  - 'Psy : Comment puis-je vous aider ?'
   - "J : J'ai l\u2019impression d'avoir perdu mon coeur."
   - "J : Une vie de souffrance m\u2019a men\xE9(e) \xE0 grandir sans bases affectives,
     n\u2019ayant connu que violence en lieu de proches depuis ma naissance."
@@ -61,8 +61,8 @@ MonoBehaviour:
   - "J : Mon existence ainsi priv\xE9e de son sens et mon sentiment de ma valeur
     reni\xE9, je sombre dans le d\xE9sespoir, ne voyant plus d\u2019autre d\xE9livrance
     que la mort."
-  - "P : Je vois. Je vais vous aider \xE0 trouver de nouvelles perspectives de vie
-    pour que vous puissiez surmonter cette \xE9preuve et aller de l'avant."
+  - "Psy : Je vois. Je vais vous aider \xE0 trouver de nouvelles perspectives de
+    vie pour que vous puissiez surmonter cette \xE9preuve et aller de l'avant."
   - "Trouvez tout ce qui vous fait vous sentir mieux, ce qui vous anime et vous porte
     pour tenir un jour de plus. Appr\xE9ciez chaque instant agr\xE9able et le miracle
     de la vie avec ses potentialit\xE9s."
@@ -80,7 +80,12 @@ MonoBehaviour:
     dans un futur proche. Plus vous entrez en contact avec de nouvelles personnes
     enrichissantes, plus vous gagnez en confiance en vous exprimant authentiquement,
     plus vous vous rapprochez de cette personne.
-  repliesIsPlayedJustAfter: 01010101010100010001000100
+  - "J : Gr\xE2ce \xE0 votre aide j\u2019ai trouv\xE9 la force d\u2019affronter mes
+    peurs, surmonter ma souffrance et finalement retrouver espoir. "
+  - "J : Je suis enfin devenu(e) pleinement moi m\xEAme et cela m\u2019a permis de
+    rencontrer l'amour authentique pour lequel j'ai toujours v\xE9cu."
+  - 'J : Je me sens revivre. Vous avez ma gratitude. Merci !'
+  repliesIsPlayedJustAfter: 01010101010100010001000100010101
 --- !u!114 &8337172553284028885
 MonoBehaviour:
   m_ObjectHideFlags: 0
