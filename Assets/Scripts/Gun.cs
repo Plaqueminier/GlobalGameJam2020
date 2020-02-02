@@ -28,7 +28,6 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            // lineRenderer.SetPosition(1, hit.point + hit.normal);
             lineRenderer.SetPosition(1, hit.point + hit.normal);
         }
         if (Input.GetButton("Fire1") && !release && !playerManager.inputPaused)
@@ -67,7 +66,7 @@ public class Gun : MonoBehaviour
             if (target != null && Time.time >= nextTimeToFire)
             {
                 target.TakeDamage(damage);
-                nextTimeToFire = nextTimeToFire = Time.time + 2f / damageRate;
+                nextTimeToFire = Time.time + 2f / damageRate;
             }
             if (hit.rigidbody != null)
             {

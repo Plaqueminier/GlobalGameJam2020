@@ -100,36 +100,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18d0cdb4debc2c246a1e45a9628e49cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   attackRadius: 3.3
   lookRadius: 12
   animator: {fileID: 2667930724358276296}
-  ennemy: {fileID: 0}
+  ennemy: {fileID: 2667930723295430590}
   mort_run:
-    name: 
+    name:
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
   mort_scream:
-    name: 
+    name:
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
   mort_attaque:
-    name: 
+    name:
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
   mort_die:
-    name: 
+    name:
     clip: {fileID: 0}
     volume: 0
     pitch: 0
     source: {fileID: 0}
+  waitAttack: 1
+  waitNextAttack: 12
 --- !u!114 &2183398030939326727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,8 +142,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15d9f25c2e682c54a9fb17d6deb3c17d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   health: 50
 --- !u!114 &7013899774458605800
 MonoBehaviour:
@@ -153,9 +155,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bb6924eb86c7e846a66bf13a7655c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
+  m_Name:
+  m_EditorClassIdentifier:
+  damage: 2
   attackSpeed: 0.4
   attackDelay: 1.5
 --- !u!82 &7605231029574681858
@@ -171,7 +173,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: caf7f5f61ff3ae54785c2a7bd90f7d5f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.5
+  m_Pitch: 1.32
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -229,7 +231,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.10555556
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -269,7 +271,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1078,7 +1080,7 @@ PrefabInstance:
     - target: {fileID: 7710326664380612567, guid: 871a0f159c8efc84e9a8683ebcaa7606,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 9a09c6e70c7379243af2a331535e927b, type: 2}
     - target: {fileID: 8021513722340897840, guid: 871a0f159c8efc84e9a8683ebcaa7606,
         type: 3}

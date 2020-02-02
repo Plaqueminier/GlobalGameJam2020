@@ -20,6 +20,9 @@ public class Enemy_Mort : Enemy
     EnemyCombat enemyCombat;
     bool scream = false;
 
+    public float waitAttack = 1f;
+    public float waitNextAttack = 12f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,10 +84,12 @@ public class Enemy_Mort : Enemy
             // {
             //     mort_run.source.Stop();
             // }
-
-            if (!mort_attaque.source.isPlaying)
+            Debug.Log(Time.time);
+            if (!mort_attaque.source.isPlaying && Time.time >= waitAttack)
             {
                 mort_attaque.source.Play();
+
+                waitAttack = Time.time + 1f / waitNextAttack;
             }
 
         }

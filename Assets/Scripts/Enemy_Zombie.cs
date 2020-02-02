@@ -65,7 +65,7 @@ public class Enemy_Zombie : Enemy
         }
         if (!isRunning && !isAttacking)
         {
-            Debug.Log(ennemy);
+            //Debug.Log(ennemy);
         }
         else if (isRunning && !isAttacking)
         {
