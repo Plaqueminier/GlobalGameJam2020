@@ -15,12 +15,14 @@ public class MobWaves : MonoBehaviour
     int wave1Size;
     int wave2Size;
     int wave3Size;
+    bool bossKilled;
     public DialogueSystem dialogueSystem;
 
     void Start()
     {
         isTriggered = false;
         waveNb = 0;
+        bossKilled = false;
         wave1Size = wave1.Count;
         wave2Size = wave2.Count;
         wave3Size = wave3.Count;
@@ -45,7 +47,6 @@ public class MobWaves : MonoBehaviour
         {
             if (wave2audio.gameObject.transform.childCount == 0)
             {
-                waveNb += 1;
                 launchWave3();
             }
         }
@@ -53,9 +54,13 @@ public class MobWaves : MonoBehaviour
         {
             if (wave3audio.gameObject.transform.childCount == 0)
             {
-                if (!FindObjectOfType<AudioManager>().IsPlaying("victory"))
-                {
-                    FindObjectOfType<AudioManager>().Play("victory");
+                if (!bossKilled) {
+                    dialogueSystem.playNextReply();
+                    bossKilled = true;
+                    if (!FindObjectOfType<AudioManager>().IsPlaying("victory"))
+                    {
+                        FindObjectOfType<AudioManager>().Play("victory");
+                    }
                 }
             }
         }

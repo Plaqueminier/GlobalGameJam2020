@@ -491,6 +491,11 @@ PrefabInstance:
       propertyPath: playerManager
       value: 
       objectReference: {fileID: 1547973452}
+    - target: {fileID: 8337172553284028891, guid: 54a4cbc5273230945a16bca824aafbf5,
+        type: 3}
+      propertyPath: repliesIsPlayedJustAfter.Array.data[15]
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54a4cbc5273230945a16bca824aafbf5, type: 3}
 --- !u!1001 &87999930
@@ -1421,6 +1426,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 280861187}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &730505712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8337172553284028885, guid: 54a4cbc5273230945a16bca824aafbf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 83933921}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c019be198875e4586840ea243a3465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &738174552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3102,6 +3119,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 730505712}
+    - target: {fileID: 9027414919057925751, guid: f0af70272b29ea545aec7180870b1ccd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 9027414919441034504, guid: f0af70272b29ea545aec7180870b1ccd,
         type: 3}
@@ -3217,6 +3239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 730505712}
+    - target: {fileID: 9027414919693764908, guid: f0af70272b29ea545aec7180870b1ccd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePauseMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0af70272b29ea545aec7180870b1ccd, type: 3}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DialogueSystem : MonoBehaviour
@@ -58,14 +59,17 @@ public class DialogueSystem : MonoBehaviour
 
     public void playNextReply()
     {
-        displayText(replies[replyCount], repliesIsPlayedJustAfter[replyCount]);
-        dialoguePanel.SetActive(true);
-        replyCount += 1;
+        if (replyCount < replies.Length) {
+            displayText(replies[replyCount], repliesIsPlayedJustAfter[replyCount]);
+            dialoguePanel.SetActive(true);
+            replyCount += 1;
+        } else {
+            SceneManager.LoadScene("YouWin");
+        }
     }
 
     public void GoToNext()
     {
-        Debug.Log(isDisplaying);
         if (!isDisplaying && isPlayedAfter) {
             playNextReply();
         } else if (isDisplaying) {
