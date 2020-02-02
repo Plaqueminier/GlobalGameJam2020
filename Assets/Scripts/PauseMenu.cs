@@ -22,7 +22,9 @@ public class PauseMenu : MonoBehaviour
 
     public void TogglePauseMenu()
     {
+        Cursor.visible = (!Cursor.visible) ? true : false;
         Cursor.lockState = (Cursor.lockState == CursorLockMode.Locked) ? CursorLockMode.None : CursorLockMode.Locked;
+
         Time.timeScale = (Time.timeScale == 0) ? 1 : 0;
         pauseMenu.SetActive(!pauseMenu.activeSelf);
         playerManager.inputPaused = !playerManager.inputPaused;

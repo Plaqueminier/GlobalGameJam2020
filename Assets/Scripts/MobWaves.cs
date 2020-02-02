@@ -7,6 +7,9 @@ public class MobWaves : MonoBehaviour
     public List<GameObject> wave1 = new List<GameObject>();
     public List<GameObject> wave2 = new List<GameObject>();
     public List<GameObject> wave3 = new List<GameObject>();
+    public AudioSource wave1audio;
+    public AudioSource wave2audio;
+    public AudioSource wave3audio;
     bool isTriggered;
     private int waveNb;
     int wave1Size;
@@ -83,6 +86,7 @@ public class MobWaves : MonoBehaviour
 
     void launchWave1()
     {
+        wave1audio.enabled = true;
         waveNb += 1;
         dialogueSystem.playNextReply();
         foreach (GameObject mob in wave1)
@@ -93,6 +97,8 @@ public class MobWaves : MonoBehaviour
 
     void launchWave2()
     {
+        wave1audio.enabled = false;
+        wave2audio.enabled = true;
         waveNb += 1;
         dialogueSystem.playNextReply();
         foreach (GameObject mob in wave2)
@@ -103,6 +109,8 @@ public class MobWaves : MonoBehaviour
 
     void launchWave3()
     {
+        wave2audio.enabled = false;
+        wave3audio.enabled = true;
         waveNb += 1;
         dialogueSystem.playNextReply();
         foreach (GameObject mob in wave3)

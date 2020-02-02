@@ -18,6 +18,7 @@ public class SceneNavigation : MonoBehaviour
     public void navigateToMainMenu()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -28,11 +29,13 @@ public class SceneNavigation : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Button_quit");
         }
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Application.Quit();
     }
     public void selectScene()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         Debug.Log(this.gameObject.name);
         switch (this.gameObject.name)

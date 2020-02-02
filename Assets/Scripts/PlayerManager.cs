@@ -115,6 +115,7 @@ public class PlayerManager : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("MORT");
             }
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             SceneManager.LoadScene("GameOver");
         }
     }
