@@ -9,7 +9,7 @@ public class SceneNavigation : MonoBehaviour {
 
         Debug.Log (this.gameObject.name);
         switch (this.gameObject.name) {
-            case "Replau":
+            case "Replay":
                 SceneManager.LoadScene ("SampleScene");
                 break;
             case "Quit":
