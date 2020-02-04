@@ -17,7 +17,6 @@ public class Gun : MonoBehaviour
     bool release = true;
 
     private float nextTimeToFire = 0f;
-    private Vector3 newPos;
     void Start()
     {
         playerManager = PlayerManager.instance;
@@ -29,7 +28,7 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            lineRenderer.enabled = true;
+            lineRenderer.SetPosition(1, hit.point + hit.normal);
         }
         if (Input.GetButton("Fire1") && !release && !playerManager.inputPaused)
         {
@@ -77,9 +76,13 @@ public class Gun : MonoBehaviour
             // GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             // Destroy(impactGO, 2f);
 
+
+
             lineRenderer.enabled = true;
 
+
         }
+
 
     }
 }
