@@ -162,8 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  attackSpeed: 0.4
-  attackDelay: 1.5
+  attackSpeed: 0.3
+  attackDelay: 2.1
 --- !u!82 &7605231029574681858
 AudioSource:
   m_ObjectHideFlags: 0
